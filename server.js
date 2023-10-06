@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
         message:"welcome"
     })
 })
-const PORT=process.env.PORT||8542;
-app.listen(PORT,()=>{
-    console.log(`connection successfull on port number ${PORT}`)
+const Port=process.env.Port||8542;
+app.listen(Port,()=>{
+    console.log(`connection successfull on port number ${Port}`)
 })
