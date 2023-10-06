@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import morgan from 'morgan'
 import connectDB  from './config/conn.js'
 import authRoutes from './routes/authRoute.js'
+
 dotenv.config()
 connectDB()
 const app=express()
@@ -11,10 +12,10 @@ app.use(express.json())
 app.use('/api/v1/auth',authRoutes)
 app.get('/',(req,res)=>{
     res.send({
-        message:"welcome to my home page"
+        message:"welcome"
     })
 })
-const PORT=process.env.PORT||8542;
-app.listen(PORT,()=>{
-    console.log(`connection successfull on port number ${PORT}`)
+const Port=process.env.Port||8542;
+app.listen(Port,()=>{
+    console.log(`connection successfull on port number ${Port}`)
 })
