@@ -12,10 +12,10 @@ app.use(express.json())
 app.use('/api/v1/auth',authRoutes)
 app.get('/',(req,res)=>{
     res.send({
-        message:"welcome to my home page"
+        message:"welcome"
     })
 })
-const port=process.env.PORT||8542;
-app.listen(port,()=>{
+const PORT=process.env.PORT||8542;
+app.listen(PORT,()=>{
     console.log(`connection successfull on port number ${PORT}`)
 })
